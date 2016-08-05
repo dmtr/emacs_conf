@@ -1,10 +1,13 @@
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 (load "package")
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-                          ("melpa" . "http://melpa.milkbox.net/packages/")))
+                          ("melpa" . "http://melpa.org/packages/")))
+
+(add-to-list 'package-archives
+	                  '("elpy" . "http://jorgenschaefer.github.io/packages/"))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil 'noerror)
@@ -16,17 +19,35 @@
       (eval-print-last-sexp))))
 (el-get 'sync)
 
-(require 'ido)
-(ido-mode t)
 
+(package-initialize)
+(elpy-enable)
 
-;(add-hook 'python-mode-hook 'auto-complete-mode)
-;(add-hook 'python-mode-hook 'jedi:ac-setup)
+;; modes
+;;(require 'uniquify)
+;;(require 'ido)
+;;(ido-mode t)
+;;
+(require 'evil)
+(evil-mode 1)
 
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
+(require 'helm-config)
+(global-set-key (kbd "M-x") #'helm-M-x)
+(global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
+(helm-mode 1)
+(helm-adaptive-mode 1)
+(add-to-list 'display-buffer-alist
+                    `(,(rx bos "*helm" (* not-newline) "*" eos)
+                         (display-buffer-in-side-window)
+                         (inhibit-same-window . t)
+                         (window-height . 0.4)))
 
-;(setq-default py-shell-name "ipython")
-;(setq-default py-which-bufname "IPython")
+(add-hook 'after-init-hook 'global-company-mode)
+;;(add-hook 'after-save-hook 'elpy-check)
+(add-hook 'python-mode-hook 
+          (lambda () 
+             (add-hook 'after-save-hook 'elpy-check nil 'make-it-local)))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -43,70 +64,25 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 128 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 168 :width normal :foundry "unknown" :family "Ubuntu Mono")))))
 
 (global-linum-mode t)
-(global-set-key [(control f2)] 'occur)
-(global-set-key [(control f6)] 'rgrep)
-(global-set-key "\M-a" 'hippie-expand)
-(global-set-key [(control shift f)] 'find-name-dired)
+;;(global-set-key [(control-x s)] 'occur)
+;;(global-set-key [(control f6)] 'rgrep)
+;;(global-set-key "\M-a" 'hippie-expand)
+;;(global-set-key [(control shift f)] 'find-name-dired)
 
-(require 'rect-mark)
-(global-set-key (kbd "C-x r C-SPC") 'rm-set-mark)
-(global-set-key (kbd "C-x r C-x")   'rm-exchange-point-and-mark)
-(global-set-key (kbd "C-x r C-w")   'rm-kill-region)
-(global-set-key (kbd "C-x r M-w")   'rm-kill-ring-save)
-
-(autoload 'idomenu "idomenu" nil t)
-(global-set-key "\C-cv" 'idomenu)
-(global-set-key [(control f3)] 'speedbar)
-
-
-;; Shift the selected region right if distance is postive, left if
-;; negative
-
-(defun shift-region (distance)
-  (let ((mark (mark)))
-    (save-excursion
-      (indent-rigidly (region-beginning) (region-end) distance)
-      (push-mark mark t t)
-      ;; Tell the command loop not to deactivate the mark
-      ;; for transient mark mode
-      (setq deactivate-mark nil))))
-
-(defun shift-right ()
-  (interactive)
-  (shift-region 1))
-
-(defun shift-left ()
-  (interactive)
-  (shift-region -1))
-
-;; Bind (shift-right) and (shift-left) function to your favorite keys. I use
-;; the following so that Ctrl-Shift-Right Arrow moves selected text one 
-;; column to the right, Ctrl-Shift-Left Arrow moves selected text one
-;; column to the left:
-
-(global-set-key [C-S-right] 'shift-right)
-(global-set-key [C-S-left] 'shift-left)
-
+;;(autoload 'idomenu "idomenu" nil t)
 
 ;;Python
-(add-to-list 'load-path "/home/dmtr/github/emacs-for-python") ;; tell where to load the various files
-(require 'epy-setup)      ;; It will setup other loads, it is required!
-(require 'epy-python)     ;; If you want the python facilities [optional]
-(require 'epy-completion) ;; If you want the autocompletion settings [optional]
-(require 'epy-editing)    ;; For configurations related to editing [optional]
-(require 'epy-bindings)   ;; For my suggested keybindings [optional
-(epy-setup-checker "pyflakes %f")
-
-;; pep8
-(require 'pep8)
-(global-set-key (kbd "C-c p 8") 'pep8)
-
+(global-set-key "\M-g" 'elpy-goto-definition)
+(global-set-key "\M-b" 'pop-tag-mark)
+(setenv "LC_CTYPE" "UTF-8")
+(setenv "LC_ALL" "en_US.UTF-8")
+(setenv "LANG" "en_US.UTF-8")
 
 ;; add pylookup to your loadpath, ex) ~/.emacs.d/pylookup
-(setq pylookup-dir "/home/dmtr/github/pylookup")
+(setq pylookup-dir "/Users/dmtr/github/pylookup")
 (add-to-list 'load-path pylookup-dir)
 
 ;; load pylookup when compile time

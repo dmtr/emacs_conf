@@ -1,0 +1,98 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/dmtr/proj/python/test_emacs/teste/" . "teste/")
+ ("/Users/dmtr/proj/python/test_emacs/" . "teste/")
+ ("/Users/dmtr/.emacs.d/" . "settings/")
+ ("/Users/dmtr/github/" . "emacs/")
+ ("/Users/dmtr/" . ".emacs.d/")
+ ("/Users/" . "dmtr/")
+ ("/" . "Users/")
+ ("/Users/dmtr/proj/python/ip_rest/web/ip_rest/" . "ip_app/")
+ ("/Users/dmtr/proj/python/ip_rest/web/" . "ip_rest/")
+ ("/Users/dmtr/proj/python/ip_rest/" . "web/")
+ ("/Users/dmtr/proj/python/" . "test_emacs/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/dmtr/"
+ "/Users/dmtr/.virtualenvs/test_emacs/lib/python2.7/site-packages/django/db/models/"
+ "/Users/dmtr/proj/python/test_emacs/teste/testapp/"
+ "/Users/dmtr/proj/python/test_emacs/teste/teste/"
+ "/Users/dmtr/.emacs.d/settings/"
+ "/Users/dmtr/github/emacs/"
+ "/Users/dmtr/proj/python/eksmo/web/eksmo_wms/salesbeat/"
+ "/Users/dmtr/proj/python/eksmo/web/eksmo_wms/common/deliveries/"
+ "/Users/dmtr/github/emacs-for-python/"
+ "/Users/dmtr/proj/python/ip_rest/web/ip_rest/ip_app/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ "manager.py"
+ "signals.py"
+ "views.py"
+ "settings.py"
+ "models.py"
+ "yasnippet-settings.el"
+ "python-settings.el"
+ "helm-settings.el"
+ "auto-complete-settings.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/dmtr/" (22435 9723 0 0) "work_shared/" "work/" "VirtualBox VMs/" "vim/" "vagrant_ssh" "Users/" "ubuntu_trusty64/" "ubuntu64.vdi" "ubuntu/" "tmux-client-49272.log" "tmpryUxLx" "tmpenam4h" "tmp_music/" "tmp.dmg" "temp-49953.rdb" "TDR.txt" "Sites/" "server.jpeg" "scripts/" "scala-2.11.6/" "rotated.jpg" "rethinkdb_data/" "resized_tmpfRRwRI" "redis2.conf" "rc/" "rabbitmq-env.conf" "python-mode/" "python/" "pymode.vim" "Public/" "proj/" "prince_todo" "Pictures/" "pbcopy" "pbase.kdb" "old_vim.tar.gz" "newbase.kdbx" "new.ovpn" "Music/" "Movies/" "mongo/" "models.py" "Library/" "keys.tar.gz" "keys/" "key.zip" "keepassx/" "img2.jpeg" "img" "IdeaProjects/" "gitignore_global" "github/" "girls_arnd" "dump.rdb" "Dropbox (Old)/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "container" "config.ovpn" "ClionProjects/" "bot.tar.gz" "bitbucket/" "bin/" "autoreview" "Applications/" "app_test/" ".zshrc.zni" ".zshrc.pre-oh-my-zsh" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-dmtr-m-5.0.8" ".zcompdump-dmtr-m-5.0.6" ".zcompdump-dmtr-m-5.0.5" ".zcompdump-dmtr-m-5.0.2" ".zcompdump-dmtr-m (2)-5.0.6" ".zcompdump-dmtr-m (2)-5.0.5" ".zcompdump" ".yolk/" ".yandex/" ".xonsh_man_completions" ".xonsh_history.json" ".Xauthority" ".wireshark-etc/" ".wireshark/" ".vscode/" ".virtualenvs/" ".vimrc" ".vimperator/" ".viminfo" ".vim-fuf-data/" ".vim/" ".vagrant.d/" ".vagrant/" ".Trash/" ".tmuxp/" ".tmux.conf" ".tmux/" ".tigrc" ".swt/" ".subversion/" ".stack/" ".ssh/" ".spacemacs.bak" ".scala_history" ".sbt/" ".ropeproject/" ".rnd" ".rediscli_history" ".Rapp.history" ".python_history" ".python27_compiled/" ".PyCharm40/" ".ptpython/" ".psql_history" ".profile" ".pip/" ".oh-my-zsh/" ".npm/" ".node_repl_history" ".mongorc.js.orig" ".mongorc.js" ".matplotlib/" ".macports/" ".local/" ".lesshst" ".ivy2/" ".ipython/" ".inputrc" ".idlerc/" ".idea-build/" ".histfile" ".hgrc" ".gitk" ".gitconfig" ".ghc/" ".fontconfig/" ".erlang.cookie" ".emacs~" ".emacs.d.bak.bak/" ".emacs.d.bak/" ".emacs.d/" ".emacs" ".DS_Store" ".dropbox/" ".docker/" ".designer/" ".dbshell" ".config/" ".clion10/" ".CFUserTextEncoding" ".cache/" ".boot2docker/" ".bashrc" ".bash_profile" ".bash_history" ".atom/" ".android/" ".3T/" "../" "./")
+
+ ("/Users/dmtr/.virtualenvs/test_emacs/lib/python2.7/site-packages/django/db/models/" (22435 10127 0 0) "utils.pyc" "utils.py" "sql/" "signals.pyc" "signals.py" "query_utils.pyc" "query_utils.py" "query.pyc" "query.py" "options.pyc" "options.py" "manager.pyc" "manager.py" "lookups.pyc" "lookups.py" "functions/" "fields/" "expressions.pyc" "expressions.py" "deletion.pyc" "deletion.py" "constants.pyc" "constants.py" "base.pyc" "base.py" "aggregates.pyc" "aggregates.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/dmtr/proj/python/test_emacs/teste/testapp/" (22435 7568 0 0) "views.py~" "views.py" "tests.py" "models.py~" "models.py" "migrations/" "apps.py" "admin.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/dmtr/proj/python/test_emacs/teste/teste/" (22433 58121 0 0) "wsgi.py" "urls.py" "settings.pyc" "settings.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/dmtr/github/emacs-for-python/" (22433 48605 0 0) "snippets/" "scripts/" "README.org" "python-libs/" "extensions/" "epy-setup.el" "epy-python.el" "epy-nose.el" "epy-init.el" "epy-editing.el" "epy-completion.el" "epy-bindings.el" "doc/" "COPYING" "CONTRIBUTORS" "ChangeLog" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/dmtr/proj/python/eksmo/web/eksmo_wms/common/deliveries/" (22433 55101 0 0) "pickpoint.py" "hermes.py" "ds_utils.py" "boxberry.py" "b2cpl.py" "act_tpls/" "__pycache__/" "__init__.py" "#hermes.py#" "#ds_utils.py#" "../" "./")
+
+ ("/Users/dmtr/github/emacs/" (22433 52789 0 0) "README.md" "bootstrap.sh" ".gitignore" ".git/" ".emacs.d/" ".emacs" "../" "./")
+
+ ("/Users/dmtr/.emacs.d/" (22433 63873 0 0) "snippets/" "lisp/" "ido.last~" "ido.last" "eproject.lst" "elpa/" "el-get/" "auto-save-list/" "ac-comphist.dat" "../" "./")
+
+ ("/Users/dmtr/proj/python/" (22433 57978 0 0) "twphoto/" "tree_task/" "tlgrmbot/" "testp3/" "test_emacs/" "test/" "tdr.tar.gz" "tdr/" "snippets/" "site/" "sample_mod/" "reverse_twitter/" "prince/" "ip_task/" "ip_rest/" "hitmeapp/" "girls_around/" "girls-around/" "func_test/" "freetwit/" "eksmo/" "ekg_sampler/" "dump.rdb" "dj-voice/" "autoreview_site/" "autoreview/" ".ropeproject/" "../" "./")
+
+ ("/Users/dmtr/proj/python/test_emacs/" (22433 58051 0 0) "teste/" "../" "./")
+
+ ("/Users/dmtr/proj/python/test_emacs/teste/" (22433 58139 0 0) "teste/" "testapp/" "manage.py" "../" "./")
+
+ ("/Users/dmtr/.emacs.d/settings/" (22433 54510 0 0) "yasnippet-settings.el" "python-settings.el" "helm-settings.el" "general-settings.el" "auto-complete-settings.el" "../" "./")
+
+ ("/Users/dmtr/github/" (22433 52031 0 0) "tw_export/" "ramda/" "pylookup/" "pyffmpeg/" "overholt/" "mongo-hacker/" "macvim/" "flask-admin/" "emacs_conf/" "emacs-for-python/" "emacs/" "dockerizing-django/" "docker/" "django/" "blockcheck/" "AutobahnPython/" "aiohttp/" ".DS_Store" "../" "./")
+
+ ("/Users/dmtr/proj/python/eksmo/web/eksmo_wms/" (22433 47678 0 0) "warehouse/" "update_products.py" "static/" "salesbeat_db.sql" "salesbeat/" "README.md" "pip_requirements.txt" "manage.py" "ibus/" "gunicorn_config.py" "data.py" "common/" "__pycache__/" "__init__.pyc" ".hgignore" ".hg/" "../" "./")
+
+ ("/Users/dmtr/proj/python/eksmo/web/eksmo_wms/salesbeat/" (22303 37484 0 0) "wsgi.py" "urls.py" "settings_development.py" "settings.pyc" "settings.py" "dev_settings.pyc" "dev_settings.py" "celery.py" "__pycache__/" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/dmtr/proj/python/ip_rest/web/ip_rest/ip_app/" (22432 37537 0 0) "views.py" "urls.py" "tests.py" "serializers.py" "models.py" "migrations/" "apps.py" "admin.py" "__pycache__/" "__init__.py" "#views.py#" "#models.py#" "../" "./")
+
+ ("/Users/" (22163 37404 0 0) "Shared/" "Guest/" "dmtr/" ".localized" "../" "./")
+
+ ("/Users/dmtr/proj/python/eksmo/" (22307 12312 0 0) "web/" "postgresql/" "nginx/" "macros/" "docker-compose.yml" ".ropeproject/" "../" "./")
+
+ ("/Users/dmtr/proj/python/eksmo/web/" (22304 27497 0 0) "eksmo_wms/" "Dockerfile" ".ropeproject/" "../" "./")
+
+ ("/Users/dmtr/proj/python/eksmo/web/eksmo_wms/common/" (22432 29422 0 0) "views.py" "urls.py" "tests.py" "templates/" "tasks.py" "models.py" "migrations/" "management/" "deliveries/" "apps.py" "admin.py" "__pycache__/" "__init__.py" "../" "./")
+
+ ("/Users/dmtr/proj/python/ip_rest/web/ip_rest/" (22406 18436 0 0) "requirements.txt" "manage.py" "iprest/" "ip_app/" "__pycache__/" "../" "./")
+
+ ("/Users/dmtr/proj/python/ip_rest/web/" (22406 4626 0 0) "ip_rest/" "Dockerfile" "../" "./")
+
+ ("/Users/dmtr/proj/python/ip_rest/" (22406 19301 0 0) "web/" "README.md" "postgresql/" "nginx/" "docker-compose.yml" ".ropeproject/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/dmtr/proj/" (22375 48959 0 0) "r-proj/" "python/" "haskell/" ".ropeproject/" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

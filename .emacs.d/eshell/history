@@ -1,0 +1,3 @@
+cd proj/python/test_emacs/
+ls
+workon test_emacs
