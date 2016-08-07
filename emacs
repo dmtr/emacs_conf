@@ -30,6 +30,7 @@
 ;;
 (require 'evil)
 (evil-mode 1)
+(evil-set-initial-state 'term-mode 'emacs)
 
 (require 'helm-config)
 (global-set-key (kbd "M-x") #'helm-M-x)
@@ -80,6 +81,9 @@
 (setenv "LC_CTYPE" "UTF-8")
 (setenv "LC_ALL" "en_US.UTF-8")
 (setenv "LANG" "en_US.UTF-8")
+
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i")
 
 ;; add pylookup to your loadpath, ex) ~/.emacs.d/pylookup
 (setq pylookup-dir "/Users/dmtr/github/pylookup")
